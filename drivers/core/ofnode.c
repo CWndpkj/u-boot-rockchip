@@ -136,6 +136,7 @@ ofnode ofnode_find_subnode(ofnode node, const char *subnode_name)
 	} else {
 		int ooffset = fdt_subnode_offset(gd->fdt_blob,
 				ofnode_to_offset(node), subnode_name);
+		debug("ooffset:%d\n",ooffset);
 		subnode = offset_to_ofnode(ooffset);
 	}
 	debug("%s\n", ofnode_valid(subnode) ?

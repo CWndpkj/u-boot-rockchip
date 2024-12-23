@@ -1317,6 +1317,7 @@ free_header:
 }
 #endif
 
+#ifdef CONFIG_ROCKCHIP_RESOURCE_IMAGE
 static void *bitmap_create(int width, int height, unsigned int state)
 {
 	/* Ensure a stupidly large bitmap is not created */
@@ -1431,6 +1432,7 @@ static void *rockchip_logo_rotate(struct logo_info *logo, void *src)
 
 	return dst_rotate;
 }
+#endif
 
 static int load_bmp_logo(struct logo_info *logo, const char *bmp_name)
 {

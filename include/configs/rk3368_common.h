@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier:     GPL-2.0+
  */
-
+ #define DEBUG 3
 #ifndef __CONFIG_RK3368_COMMON_H
 #define __CONFIG_RK3368_COMMON_H
 
@@ -16,7 +16,9 @@
 
 #define CONFIG_SYS_SDRAM_BASE		0
 #define SDRAM_MAX_SIZE			0xfe000000
+#ifndef CONFIG_BAUDRATE
 #define CONFIG_BAUDRATE			115200
+#endif 
 #define CONFIG_SYS_MALLOC_LEN		(32 << 20)
 #define CONFIG_SYS_CBSIZE		1024
 #define CONFIG_SKIP_LOWLEVEL_INIT

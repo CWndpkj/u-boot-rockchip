@@ -641,6 +641,7 @@ int rockchip_ram_read_dtb_file(void *img, void *fdt)
 #endif
 	}
 #endif
-
+	(void)ret;
+	(void)format;
 	return -EINVAL;
 }
